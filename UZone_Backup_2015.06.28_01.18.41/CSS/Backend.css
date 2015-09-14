@@ -1,0 +1,173 @@
+﻿
+.header {
+    background-color: gray;
+    height: 95px;
+    width: 100%;
+}
+
+.footer {
+    background-color: black;
+    height: 45px;
+    width: 100%;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.main {
+}
+
+.shadowbox {
+    -webkit-box-shadow: -1px 6px 31px -5px rgba(20,19,20,1);
+    -moz-box-shadow: -1px 6px 31px -5px rgba(20,19,20,1);
+    box-shadow: -1px 6px 31px -5px rgba(20,19,20,1);
+}
+
+.plan {
+    float: left;
+    margin: -9.625rem 1.3125rem 0 0;
+    width: 30rem;
+    padding-top: 10rem;
+}
+
+    .plan > a {
+        text-decoration: none;
+    }
+
+.module_picker {
+    border-radius: 10px;
+    color: white;
+    position: relative;
+    text-align: center;
+    text-shadow: 0 3px 1px rgba(0, 0, 0, 0.1);
+    background-color: grey;
+    height: 20rem;
+    width: 25rem;
+    min-height: 30rem;
+}
+
+    .module_picker:hover {
+        background-color: black;
+    }
+
+.module_picker_header {
+    display: block;
+    font-size: 3.1rem;
+    line-height: 2.5rem;
+    margin-bottom: 1.25rem;
+    opacity: 0.8;
+    text-shadow: none;
+}
+
+.module_picker_details {
+    display: block;
+    font-size: 1.8rem;
+    line-height: 1rem;
+    margin-bottom: 1.25rem;
+    opacity: 0.8;
+    text-shadow: none;
+    text-align: left;
+    padding-left: 4px;
+    text-overflow: ellipsis;
+    height: 3.85em;
+}
+
+.module_picker_footer{
+    background-color: white;
+    height: 2rem;    
+}
+
+.logo {
+    padding: 0px 0px 0px 0px;
+}
+
+.image-logo {
+    padding: 5px 0px 0px 0px;
+}
+
+.carousel-control.left {
+    background-image: none !important;
+}
+
+.carousel-control.right {
+    background-image: none !important;
+}
+
+.content-main {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+}
+
+span.glyphicon-home {
+    font-size: 2.9em;
+}
+
+span.glyphicon-earphone {
+    font-size: 2.9em;
+}
+
+span.glyphicon-envelope {
+    font-size: 2.9em;
+}
+
+span.glyphicon-calendar {
+    font-size: 7.0em;
+    padding-top: 6rem;
+}
+
+span.glyphicon-pencil {
+    font-size: 7.0em;
+    padding-top: 6rem;
+}
+
+.module_picker > span.glyphicon-user {
+    font-size: 7.0em;
+    padding-top: 6rem;
+}
+
+.module_picker > .badge {
+    background-color: blue;
+    color: yellow;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: white !important;
+}
+
+    .navbar-inverse .navbar-nav > li > a:hover,
+    .navbar-inverse .navbar-nav > li > a:focus {
+        color: black !important;
+    }
+
+.navbar-nav {
+    float: right;
+}
+
+.login-menu {
+    float: right;
+    padding-top: 10px;
+    padding-right: 15px;
+    color: white;
+}
+
+.login-menu-text {
+    font-family: "Helvetica Nue",Arial, Helvetica, sans-serif !important;
+}
+
+span.login-menu > ul > li {
+    list-style: outside none none !important;
+}
+
+    span.login-menu > ul > li > a {
+        color: white !important;
+    }
+
+        span.login-menu > ul > li > a:hover {
+            color: black !important;
+            text-decoration: none !important;
+        }
+
+.glyphicon {
+    line-height: 0px !important;
+}

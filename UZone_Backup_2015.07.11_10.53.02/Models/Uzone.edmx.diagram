@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2c11b5722c6f4ac4b0a4e8110aebcad9" Name="Diagram1">
+        <EntityTypeShape EntityType="UzoneModel.LockedQuestion" Width="1.5" PointX="3.375" PointY="2.125" />
+        <EntityTypeShape EntityType="UzoneModel.RegisteredUser" Width="1.5" PointX="5.625" PointY="1" />
+        <EntityTypeShape EntityType="UzoneModel.School" Width="1.5" PointX="3.375" PointY="7.375" />
+        <EntityTypeShape EntityType="UzoneModel.UserRole" Width="1.5" PointX="3.375" PointY="11.75" />
+        <AssociationConnector Association="UzoneModel.fk_User_LockedQuestion" />
+        <AssociationConnector Association="UzoneModel.fk_User_Role" />
+        <AssociationConnector Association="UzoneModel.fk_User_School" />
+        <EntityTypeShape EntityType="UzoneModel.EventLocation" Width="1.5" PointX="5.625" PointY="8.375" />
+        <EntityTypeShape EntityType="UzoneModel.Scheduler" Width="1.5" PointX="7.875" PointY="8" />
+        <AssociationConnector Association="UzoneModel.fk_LocationScheduler" />
+        <AssociationConnector Association="UzoneModel.fk_LocationSchool" />
+        <AssociationConnector Association="UzoneModel.fk_SchoolScheduler" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

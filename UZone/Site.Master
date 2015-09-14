@@ -1,0 +1,112 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="UZone.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - U Zone</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+    <link href="Images/UZONE_favicon.png" rel="shortcut icon" type="image/x-icon" />
+    <link href="CSS/Backend.css" rel="stylesheet" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="respond" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <asp:ScriptReference Path="~/Scripts/Register.js" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+        <div class="navbar navbar-inverse navbar-fixed-top header">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="logo" runat="server" href="~/Home">
+                        <asp:Image CssClass="image-logo" runat="server" ImageUrl="~/Images/UZONE_Logo_Transparent_Small.png" />                        
+                    </a>                   
+                </div>
+                <div class="logo-subheader">
+                    <p class="logo-subheader-text">"Enhancing student's campus experience"</p>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <div runat="server" id="anonymousLogin" class="dropdown login-menu">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
+                            <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="/Account/Login">Login</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="/Account/Register">Register User</a></li>
+                            <li role="presentation" class="divider"></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="/Account/Forgot.aspx?forgot=forgotpassword">Forgot Password</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="/Account/Forgot.aspx?forgot=forgotusername">Forgot Username</a></li>
+                        </ul>
+                    </div>
+                    <div runat="server" id="loggedInLogin" class="dropdown login-menu">
+                        <label runat="server" class="control-label" id="lbLoggedIn"></label>
+                        <button class="btn btn-default dropdown-toggle" type="button" id="menu2" data-toggle="dropdown">
+                            <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="/Admin/Modules">Modules</a></li>
+                            <li role="presentation" class="divider"></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="/Admin/Scheduler">Scheduler</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="/Account/Register">Manage Profile</a></li>
+                            <li role="presentation"><a role="menuitem" runat="server" id="schoolEditLink" tabindex="-1" href="#">Edit School</a></li>
+                            <li role="presentation" class="divider"></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="/Account/Confirm?confirm=signout">Sign Out</a></li>
+                        </ul>
+                    </div>
+                    <br />
+                    <br />
+                    <ul runat="server" id="anonymousMenu" class="nav navbar-nav">
+                        <li><a runat="server" href="~/Home">Home</a></li>
+                        <li><a runat="server" href="~/About">About Us</a></li>
+                        <li><a runat="server" href="~/Contact">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container body-content shadowbox main">
+            <asp:Image CssClass="image-logo shadowbox" runat="server" ImageUrl="~/Images/prospective-student-campus-tour-phone_stretch.jpg" />
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+        </div>
+        <div class="footer">
+            <footer class="navbar-right">
+                <p>&copy; <%: DateTime.Now.Year %> - U Zone</p>
+            </footer>
+        </div>
+    </form>
+    <script>
+        $(document).ready(function () {
+            var desiredHeight = $(window).height() - $(".header").height() - $(".footer").height();
+            $(".main").css("min-height", desiredHeight);
+        });
+    </script>
+</body>
+</html>
